@@ -25,3 +25,6 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+(1..40).each do |num|
+  Appearance.create(episode_id: num, guest_id: num, guest_rating: 5)
+end

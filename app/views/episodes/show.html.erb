@@ -1,0 +1,10 @@
+<h1>Episode <%= @episode.number %></h1>
+<h1>Aired on <%= @episode.date %></h1>
+
+<ul>
+    <% @appearances.each do |appearance| %>
+        <% if appearance.episode_id == @episode.id %>
+            <li><%= appearance.guest.name %></li>
+        <% end %>
+    <% end %>
+</ul>
