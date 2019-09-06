@@ -1,0 +1,13 @@
+<h1>Episode's show page</h1>
+
+<p>
+Episode Number: <%= @episode.number %>
+<br>
+Date: <%= @episode.date %>
+</p>
+
+<h2>All guests for this episode</h2>
+ga = @appearance.episode_id == @episode.id
+<% #ga.each do |guest| %>
+<%= #guest.name %>
+<% #end %>
