@@ -1,0 +1,9 @@
+<h1>show page for Episode</h1>
+
+
+<% @episode.ratings.each do |rating|%>
+    <%= rating.rate  %>
+<% end %>
+
+
+<%= button_to "Delete this episode", @episode, method: :delete  %>

@@ -1,0 +1,13 @@
+<h1>show page for guests</h1>
+
+
+<p>Name :<%= @guest.name %> </p>
+<p> Occupation: <%= @guest.occupation %></p>
+<% @guest.ratings.each do |rating| %>
+<%= rating.rate %>
+<%= rating.episode.date %>
+<% end %>
+
+
+
+<%= button_to "Delete this guest", @guest, method: :delete  %>

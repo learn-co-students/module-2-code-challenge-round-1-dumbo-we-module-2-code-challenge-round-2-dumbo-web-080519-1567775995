@@ -1,0 +1,9 @@
+<h1>show page for ratings</h1>
+
+
+<p><%= @rating.guest.name %> </p>
+<p> <%= @rating.episode.date %></p>
+<p> <%= @rating.rate  %></p>
+
+
+<%= button_to "Delete this rating", @rating, method: :delete  %>
