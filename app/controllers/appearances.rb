@@ -1,5 +1,4 @@
 class AppearancesController < ApplicationController
-
   def new
     @appearance = Apperance.new(flash[:attributes])
   end
@@ -8,7 +7,7 @@ class AppearancesController < ApplicationController
     @appearance = Appearance.create(appearance_params)
     if @appearance.valid?
       redirect_to @appearance
-    else 
+    else
       flash[:errors] = @appearance.errors.full_messages
       flash[:attributes] = @appearance.attributes
       redirect_to new_appearance_path
