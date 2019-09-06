@@ -5,7 +5,7 @@
 <ul>
   <% @guest.episodes.each do |episode| %>
   <li>
-    <%= "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}" %>
+    <%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode %>
   </li>
   <% end %>
 </ul>
