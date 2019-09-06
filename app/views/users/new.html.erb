@@ -1,0 +1,20 @@
+<h1>please fill out the Form</h1>
+
+
+
+
+
+<%= form_for(@user) do |f| %>
+    <%= f.hidden_field :user_id, value: @user.id %>
+    <%= f.label :guests_id %>
+    <%= f.collection_select :guests_id, @guests, :id, :name %> 
+
+    <%= f.label :episodes_id %>
+    <%= f.collection_select :episodes_id, @episodes, :id, :name %> 
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating%>%
+
+    <%= f.submit "Create Appearance"%>
+
+<% end %>

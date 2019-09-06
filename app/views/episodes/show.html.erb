@@ -1,0 +1,20 @@
+<h1> Episode's Show Page </h1>
+
+<%= @episode.date %>
+
+<%= @episode.number %>
+
+
+
+
+<ul>
+<% @guests.each do |guest| %>
+    <%= guest.name%>
+<% end %>
+</ul>
+
+<ul>
+# <% @episodes.each do |episode| %>
+#     <%= episode.guests%>
+# <% end %>
+# </ul>
