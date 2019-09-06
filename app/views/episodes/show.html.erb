@@ -1,0 +1,6 @@
+<h1>Episode <%=@episode.number%></h1>
+
+<p>Aired: <%=@episode.date%></p>
+<% @episode.appearance.each do |appe|%>
+    <p><%= appe%></p>
+<%end%>
