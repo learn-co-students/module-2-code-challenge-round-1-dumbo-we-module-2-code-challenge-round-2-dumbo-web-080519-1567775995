@@ -1,0 +1,5 @@
+<h1>Episode Show Page</h1>
+
+  <% @episode.appearances.each do |appearance| %>
+      <li><%= appearance.guest.name %></li>
+    <% end %>

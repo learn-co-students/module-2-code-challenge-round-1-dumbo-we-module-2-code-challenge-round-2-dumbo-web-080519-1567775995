@@ -1,0 +1,17 @@
+<h1>Edit Appearance</h1>
+
+
+<%= form_for @appearance do |f| %>
+<% if flash[:errors] %>
+  <% flash[:errors].each do |error| %>
+  <li><%= error %></li>
+  <% end %>
+<% end %><br>
+
+
+
+  <%= f.label "Rating" %>
+  <%= f.number_field :rating %>
+
+  <%= f.submit "Edit Appearance Rating" %>
+<% end %>

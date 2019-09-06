@@ -1,0 +1,5 @@
+<h1>All Scheduled Appearances</h1>
+
+  <% @appearances.each do |appearance| %>
+    <h3><%= link_to " Episode: #{appearance.episode.number}", appearance%></h3>
+  <% end %>

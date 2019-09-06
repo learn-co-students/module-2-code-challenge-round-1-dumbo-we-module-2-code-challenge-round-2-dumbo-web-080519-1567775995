@@ -1,0 +1,9 @@
+<h1>Show Page</h1>
+
+  <h3><%= @appearance.guest.name %> on <%= @appearance.episode.date %></h3>
+  <h4>Rating: <%= @appearance.rating %></h4>
+  <br>
+  <br>
+  <h5><%= link_to "Edit This Appearance", edit_appearance_path(@appearance) %></h5>
+
+  <%= button_to "Cancel Appearance", @appearance, method: :delete %>
