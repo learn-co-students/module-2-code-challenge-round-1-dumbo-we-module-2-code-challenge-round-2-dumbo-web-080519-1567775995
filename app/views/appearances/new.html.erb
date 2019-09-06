@@ -7,12 +7,12 @@
 <%= form_for @appearance do |f| %>
   <%= f.label :guest %><br>
   <%= f.collection_select :guest_id, Guest.all, :id, :name  %>
-  <br>
+  <br><br>
   <%= f.label :episode %> <br>
   <%= f.collection_select :episode_id, Episode.all, :id, :number %>
-  <br>
-  <%= f.label :rating %> <br>
+  <br><br>
+  <%= f.label :rating, "Rating (1-5)" %> <br>
   <%= f.number_field :rating %>
-  <br>
+  <br><br>
   <%= f.submit %>
 <% end %>
