@@ -1,0 +1,11 @@
+<h1> <%=  @guest.name %> </h1>
+<h2> <%= @guest.occupation %> </h2>
+
+<h3> Has Appeared On: </h3>
+<ul>
+  <% @guest.episodes.each do |episode| %>
+  <li>
+    <%= link_to "Episode #{episode.number} - #{episode.date.strftime("%B %d, %Y")}", episode %>
+  </li>
+  <% end %>
+</ul>

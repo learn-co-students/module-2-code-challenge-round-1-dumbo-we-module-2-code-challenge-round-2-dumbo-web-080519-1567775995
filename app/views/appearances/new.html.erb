@@ -1,0 +1,18 @@
+<h1> Form To Create New Guest Appearance </h1>
+
+<% if flash[:errors] %>
+  <%= flash[:errors].to_sentence %>
+<% end %>
+
+<%= form_for @appearance do |f| %>
+  <%= f.label :guest %><br>
+  <%= f.collection_select :guest_id, Guest.all, :id, :name  %>
+  <br><br>
+  <%= f.label :episode %> <br>
+  <%= f.collection_select :episode_id, Episode.all, :id, :number %>
+  <br><br>
+  <%= f.label :rating, "Rating (1-5)" %> <br>
+  <%= f.number_field :rating %>
+  <br><br>
+  <%= f.submit %>
+<% end %>
