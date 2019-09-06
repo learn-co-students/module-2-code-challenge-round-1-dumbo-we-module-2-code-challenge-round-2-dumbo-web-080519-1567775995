@@ -6,7 +6,7 @@
   <!-- iterate over @episode.guests here -->
   <% @episode.guests.each do |guest| %>
     <li>
-      <%= guest.name %>
+      <%= link_to guest.name, guest %>
     </li>
   <% end %>
 </ul>
