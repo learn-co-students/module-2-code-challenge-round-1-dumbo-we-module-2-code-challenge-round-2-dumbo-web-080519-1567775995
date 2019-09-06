@@ -1,0 +1,22 @@
+ <%# As a user, I should be able to fill out a form to 
+ **create a new appearance**. I should be able to 
+ **choose an existing guest, an existing episode, and add a rating**. 
+ Upon successfully creating an appearance, I should be **redirected to the selected episode's show page**. %>
+
+
+
+ <h1>Create a new appearance</h1>
+
+ <%= form_for(@appearance) do |f| %>
+
+    <%= f.label :rating %>
+    <%= f.number_field :rating %>
+
+    <%= f.label :guest_id %>
+    <%= f.collection_select :guest_id, @guests, :id, :name %>
+
+    <%= f.label :episode_id %>
+    <%= f.collection_select :episode_id, @episodes, :id, :number %>
+    <%= f.submit%>
+<% end %>
+
