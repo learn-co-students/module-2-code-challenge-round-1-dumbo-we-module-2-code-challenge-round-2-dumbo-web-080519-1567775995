@@ -25,3 +25,6 @@ date = Date.parse('2015-09-08')
   date = date.next
 end
 
+kim = Guest.create(name: "Kimberly", occupation: "Software Engineer")
+episode1 = Episode.create(date: 10/13/2019, number: 1)
+Appearance.create(rating: 4, guest: kim, episode: episode1)
