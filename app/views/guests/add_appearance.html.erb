@@ -1,0 +1,17 @@
+<h1>Add an Appearance for <%= @guest.name %></h1>
+
+<br>
+
+<%= form_for @appearance do |f| %>
+
+  <%= f.hidden_field :guest_id, value: @guest.id %>
+
+  <%= f.label :episode_id, "Choose an Episode" %>
+  <%= f.collection_select :episode_id, @episodes, :id, :number %>
+
+  <%= f.label :guest_rating %>
+  <%= f.number_field :guest_rating %>
+
+  <%= f.submit "Add Appearance" %>
+
+<% end %>

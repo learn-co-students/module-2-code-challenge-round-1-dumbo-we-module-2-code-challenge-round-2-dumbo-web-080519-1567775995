@@ -1,0 +1,23 @@
+
+<% if flash[:errors] %>
+  <h3>There were some errors:</h3>
+  <ul>
+    <% flash[:errors].each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<br>
+
+<%= form_for @guest do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name %><br>
+
+  <%= f.label :occupation %>
+  <%= f.text_field :occupation %><br><br>
+
+  <%= f.submit %>
+
+<% end %>

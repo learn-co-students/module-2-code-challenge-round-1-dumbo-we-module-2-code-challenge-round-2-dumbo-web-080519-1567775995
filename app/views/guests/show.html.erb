@@ -1,0 +1,21 @@
+<h1><%= @guest.name %></h1>
+
+<br>
+
+<h3>Information</h3>
+
+<ul>
+  <li>Occupation: <%= @guest.occupation %></li>
+  <li>Appearances:</li>
+    <ul>
+      <% @guest.appearances.each do |appearance| %>
+        <li><%= link_to "Episode #{appearance.episode.number}", appearance.episode %></li>
+      <% end %>
+    </ul>
+</ul>
+
+<br>
+
+<%= link_to "Update #{@guest.name}'s Information", edit_guest_path(@guest) %><br>
+<%= link_to "Add an Appearance", add_appearance_path %><br><br>
+<%= button_to "Delete Guest", @guest, method: :delete %>
