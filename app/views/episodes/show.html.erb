@@ -1,0 +1,12 @@
+<h1> <%= "Episode #{@episode.number} - #{@episode.date.strftime("%B %d, %Y")}" %> </h1>
+
+
+<h3>Guests on this Episode</h3>
+<ul>
+  <!-- iterate over @episode.guests here -->
+  <% @episode.guests.each do |guest| %>
+    <li>
+      <%= guest.name %>
+    </li>
+  <% end %>
+</ul>

@@ -1,5 +1,4 @@
 class Guest < ApplicationRecord
-  has_many :episode_guests
-  has_many :episodes, through: :episode_guests
+  has_many :appearances
+  has_many :episodes, through: :appearances
 end
-guests

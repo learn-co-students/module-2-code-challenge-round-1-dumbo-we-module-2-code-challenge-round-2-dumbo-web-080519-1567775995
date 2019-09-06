@@ -1,2 +1,0 @@
-class EpisodeGuestsController < ApplicationController
-end
